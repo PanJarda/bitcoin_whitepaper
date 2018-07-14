@@ -1,0 +1,82 @@
+<svg viewBox="0 -1 1601 1002" xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+  <style>
+    rect,
+    polyline {
+      shape-rendering: crispEdges;
+      stroke-width: 1px;
+      stroke: #000;
+      fill-opacity: 0;
+    }
+
+    polygon {
+      fill="#000"
+    }
+
+    text {
+      font-size: 50px;
+      text-anchor: middle;
+    }
+  </style>
+  <defs>
+    <rect id="tx" width="400" height="750" x="100" y="0" />
+    <rect id="key-or-sig" width="300" height="150" />
+    <rect id="hash" width="150" height="100"/>
+    <polygon id="arrow-head" points="-10,-25 10,-25 0,0" />
+    <g id="tx-to-hash-arrow">
+      <polyline points="-50,300 250,300 250,350"/>
+      <use xlink:href="#arrow-head" x="250" y="350" />
+    </g>
+    <g id="pubkey-to-hash-arrow">
+      <polyline points="300,250 300,350"/>
+      <use xlink:href="#arrow-head" x="300" y="350" />
+    </g>
+    <g id="hash-to-sig-arrow">
+      <polyline points="275,450 275,550"/>
+      <use xlink:href="#arrow-head" x="275" y="550" />
+    </g>
+    <g id="verify-arrow">
+      <polyline points="400,250 400,450 700,600" stroke-dasharray="6 4"/>
+      <use xlink:href="#arrow-head" x="700" y="600" transform="rotate(-63.43 700 600)"/>
+      <text x="575" y="552.5" transform="rotate(26.57 575 552.5)">Verify</text>
+    </g>
+    <g id="sign-arrow">
+      <polyline points="450,900 700,650" stroke-dasharray="6 4"/>
+      <use xlink:href="#arrow-head" x="700" y="650" transform="rotate(-135 700 650)"/>
+      <text x="575" y="790" transform="rotate(-45 575 790)">Sign</text>
+    </g>
+    
+    <g id="tx-template">
+      <use xlink:href="#tx" />
+      <use xlink:href="#key-or-sig" x="150" y="100" />
+      <use xlink:href="#hash" x="200" y="350" />
+      <use xlink:href="#key-or-sig" x="150" y="550" />
+      <use xlink:href="#key-or-sig" x="150" y="850" />
+      <use xlink:href="#tx-to-hash-arrow" />
+      <use xlink:href="#pubkey-to-hash-arrow" />
+      <use xlink:href="#hash-to-sig-arrow" />
+      <text x="300" y="65">Transaction</text>
+      <text x="300" y="215">Public Key</text>
+      <text x="275" y="415">Hash</text>
+      <text x="300" y="665">Signature</text>
+      <text x="300" y="965">Private Key</text>
+    </g>
+  </defs>
+  <use xlink:href="#tx-template"/>
+  <use xlink:href="#verify-arrow" />
+  <use xlink:href="#sign-arrow" />
+  <text x="300" y="615">Owner 0's</text>
+  <text x="300" y="165">Owner 1's</text>
+  <text x="300" y="915">Owner 1's</text>
+
+  <use xlink:href="#tx-template" x="550"/>
+  <use xlink:href="#verify-arrow" x="550"/>
+  <use xlink:href="#sign-arrow" x="550"/>
+  <text x="850" y="615">Owner 1's</text>
+  <text x="850" y="165">Owner 2's</text>
+  <text x="850" y="915">Owner 2's</text>
+
+  <use xlink:href="#tx-template" x="1100"/>
+  <text x="1400" y="615">Owner 2's</text>
+  <text x="1400" y="165">Owner 3's</text>
+  <text x="1400" y="915">Owner 3's</text>
+</svg>

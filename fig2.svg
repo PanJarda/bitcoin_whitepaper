@@ -1,0 +1,55 @@
+<svg viewBox="-100 -1 1602 402" xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+  <style>
+    rect,
+    polyline {
+      shape-rendering: crispEdges;
+      stroke-width: 1px;
+      stroke: #000;
+      fill-opacity: 0;
+    }
+
+    polygon {
+      fill="#000"
+    }
+
+    text {
+      font-size: 50px;
+      text-anchor: middle;
+    }
+  </style>
+  <defs>
+    <rect id="hash-or-item" width="150" height="100"/>
+    <polygon id="arrow-head" points="-25,-10 -25,10 0,0" />
+    <g id="hash-to-hash-arrow">
+      <polyline points="-100,33.3 150,33.3"/>
+      <use xlink:href="#arrow-head" x="150" y="33.3" />
+    </g>
+    <g id="block-to-hash-arrow">
+      <polyline points="50,150 50,66.6 150,66.6"/>
+      <use xlink:href="#arrow-head" x="150" y="66.6" />
+    </g>
+    <g id="item">
+      <use xlink:href="#hash-or-item" x="50" y="250" />
+      <text x="125" y="315">Item</text>
+    </g>
+    <g id="block">
+      <rect width="650" height="250" x="0" y="150" />
+      <text x="325" y="215">Block</text>
+      <use xlink:href="#item"/>
+      <use xlink:href="#item" x="200" />
+      <use xlink:href="#item" x="400" />
+    </g>
+    <g id="blockchain">
+      <use xlink:href="#block" />
+      <use xlink:href="#hash-or-item" x="150" y="0" />
+      <text x="225" y="65">Hash</text>
+      <use xlink:href="#hash-to-hash-arrow" />
+      <use xlink:href="#block-to-hash-arrow" />
+      <polyline points="300,33.3 650,33.3"/>
+    </g>
+  </defs>
+  <use xlink:href="#blockchain"/>
+  <use xlink:href="#blockchain" x="750" />
+  <polyline points="1400,33.3 1500,33.3"/>
+  <use xlink:href="#arrow-head" x="1500" y="33.3" />
+</svg>

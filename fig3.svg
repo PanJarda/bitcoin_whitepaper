@@ -1,0 +1,46 @@
+<svg viewBox="-100 -1 1501 401" xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+  <style>
+    rect,
+    polyline {
+      shape-rendering: crispEdges;
+      stroke-width: 1px;
+      stroke: #000;
+      fill-opacity: 0;
+    }
+
+    polygon {
+      fill="#000"
+    }
+
+    text {
+      font-size: 48px;
+      text-anchor: middle;
+    }
+  </style>
+  <defs>
+    <rect id="hash-or-item" width="150" height="100"/>
+    <polygon id="arrow-head" points="-25,-10 -25,10 0,0" />
+    <g id="block-to-block-arrow">
+      <polyline points="-100,150 50,150"/>
+      <use xlink:href="#arrow-head" x="50" y="150" />
+    </g>
+    <g id="tx">
+      <use xlink:href="#hash-or-item" x="50" y="250" />
+      <text x="125" y="315">Tx</text>
+    </g>
+    <g id="block">
+      <rect width="650" height="400" x="0" y="0" />
+      <text x="325" y="65">Block</text>
+      <use xlink:href="#tx"/>
+      <use xlink:href="#tx" x="200" />
+      <use xlink:href="#tx" x="400" />
+      <rect width="300" height="100" x="50" y="100" />
+      <text x="200" y="165">Prev Hash</text>
+      <rect width="200" height="100" x="400" y="100" />
+      <text x="500" y="165">Nonce</text>
+      <use xlink:href="#block-to-block-arrow" />
+    </g>
+  </defs>
+  <use xlink:href="#block"/>
+  <use xlink:href="#block" x="750" />
+</svg>

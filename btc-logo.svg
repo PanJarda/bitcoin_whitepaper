@@ -1,0 +1,101 @@
+<svg viewBox="-401 -401 802 802" xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+  <style>
+    .path,
+    .b {
+      stroke-width: 1px;
+      stroke: #000;
+      fill-opacity: 0;
+    }
+  </style>
+  <defs>
+    <path id="b" d="M-165 -172
+          h94
+          v-74
+          h44
+          v74
+          h32
+          v-74
+          h44
+          v74
+          Q158 -165, 158 -88
+          Q158 -44, 120 -22
+          Q184 0, 184 60
+          Q184 155, 48 165
+          v74
+          h-44
+          v-74
+          h-32
+          v74
+          h-44
+          v-74
+          H-165
+          L-158 112
+          H-120
+          q10 0, 10 -10
+          V-114
+          q0 -10, -10 -10
+          h-45
+          Z
+          M-32 -122
+          h20
+          q85 0, 85 45
+          q0 45, -85 45
+          h-20
+          Z
+          m0 135
+          h40
+          q86 0, 86 49
+          q0 49, -86 49
+          h-40
+          Z
+          " fill-rule="evenodd"/>
+    <mask id="b-mask">
+      <g>
+        <circle r="400" fill="#fff" fill-opacity="1"/>
+        <use xlink:href="#b" fill-opacity="1" fill="#000" />
+      </g>
+    </mask>
+    <path id="leaf" class="path"
+      d="M0 0
+        q-50 280, 0 280
+        q50 0, 0 -280
+        q-50 -280, 0 -280
+        q50 0, 0 280
+        z
+      "/>
+    <g id="2-leafs">
+      <use xlink:href="#leaf" />
+      <use xlink:href="#leaf" transform="rotate(5)"/>
+    </g>
+    <g id="4-leafs">
+      <use xlink:href="#2-leafs" />
+      <use xlink:href="#2-leafs" transform="rotate(10)"/>
+    </g>
+    <g id="8-leafs">
+      <use xlink:href="#4-leafs" />
+      <use xlink:href="#4-leafs" transform="rotate(20)"/>
+    </g>
+    <g id="16-leafs">
+      <use xlink:href="#8-leafs" />
+      <use xlink:href="#8-leafs" transform="rotate(40)"/>
+    </g>
+    <g id="36-leafs">
+      <use xlink:href="#16-leafs" />
+      <use xlink:href="#16-leafs" transform="rotate(80)"/>
+      <use xlink:href="#4-leafs" transform="rotate(-20)"/>
+    </g>
+    <path id="clipping-path"
+      d="M0 315
+      a315 315 0 1 1 1 0" />
+  </defs>
+  <circle class="path" r="400" />
+  <circle class="path" r="396" />
+  <circle class="path" r="374" />
+  <circle class="path" r="370" />
+  <circle class="path" r="294" />
+  <use xlink:href="#36-leafs" mask="url(#b-mask)"/>
+  <use class="b" xlink:href="#b"/>
+  <text font-size="50" stroke-width="1px" stroke="#000" fill-opacity="0" letter-spacing="2.2">
+    <textPath xlink:href="#clipping-path">BITCOIN • PEER-TO-PEER ELECTRONIC CASH SYSTEM • IN MATH WE TRUST •</textPath>
+  </text>
+</svg>
