@@ -1,0 +1,152 @@
+<svg viewBox="0 0 520 306" xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+  <style>
+    rect,
+    polyline,
+    line {
+      stroke-width: 1px;
+      stroke: #000;
+      fill-opacity: 0;
+    }
+
+    polygon {
+      fill="#000"
+      stroke-width: 0;
+    }
+
+    text {
+      font-size: 11px;
+      font-family: georgia, serif;
+    }
+  </style>
+  <defs>
+    <polygon id="arrow-head" points="-3,12 3,12 0,0"/>
+    <polygon id="arrow-head-center" points="-3,12 4,12 0.5,0"/>
+    <rect id="tx-box" width="37" height="25" x="0.5" y="0.5"/>
+    <rect id="hash-box" width="37" height="25" stroke-dasharray="4 2"/>
+    <rect id="hash-box-double" x="0.5" y="0.5" width="54" height="25" />
+    <g id="hash-arrow-right">
+      <use xlink:href="#arrow-head" x="-20" y="-36" transform="rotate(-26.57 -20 -36)"/>
+      <line x1="0" y1="0" x2="-19" y2="-34" />
+    </g>
+    <g id="hash-arrow-right-short">
+      <use xlink:href="#arrow-head" x="-10" y="-20" transform="rotate(-26.57 -10 -20)"/>
+      <line x1="0" y1="0" x2="-9" y2="-18" />
+    </g>
+    <g id="hash-arrow-left">
+      <use xlink:href="#arrow-head" x="20" y="-36" transform="rotate(26.57 20 -36)"/>
+      <line x1="0" y1="0" x2="19" y2="-34" />
+    </g>
+    <g id="hash-arrow-left-short">
+      <use xlink:href="#arrow-head" x="10" y="-20" transform="rotate(26.57 10 -20)"/>
+      <line x1="0" y1="0" x2="9" y2="-18" />
+    </g>
+    <g id="arrow-center">
+      <use xlink:href="#arrow-head-center"/>
+      <line x1="0.5" y1="2" x2="0.5" y2="40" />
+    </g>
+    <g id="tx">
+      <use xlink:href="#arrow-center" x="18" />
+      <use xlink:href="#tx-box" y="40"/>
+    </g>
+    <g id="block">
+      <rect x="0.5" y="0.5" width="231" height="280" />
+      <text x="8" y="16" text-anchor="start">Block</text>
+      <g transform="translate(43 10)">
+        <rect x="0.5" y="0.5" width="178" height="97" />
+        <text x="8" y="16" text-anchor="start">Block Header (Block Hash)</text>
+        <g transform="translate(10 26)">
+          <rect x="0.5" y="0.5" width="67" height="25" />
+          <text x="34" y="16" text-anchor="middle">Prev Hash</text>
+        </g>
+        <g transform="translate(88 26)">
+          <rect x="0.5" y="0.5" width="49" height="25" />
+          <text x="25" y="16" text-anchor="middle">Nonce</text>
+        </g>
+        <g transform="translate(10 62)">
+          <rect x="0.5" y="0.5" width="127" height="25" />
+          <text x="64" y="16" text-anchor="middle">Root Hash</text>
+        </g>
+      </g>
+      <g transform="translate(149 118)">
+        <rect x="0.5" y="0.5" width="54" height="25" stroke-dasharray="4 2"/>
+        <use xlink:href="#hash-arrow-right-short" x="27"/>
+        <text x="27" y="16" text-anchor="middle">Hash23</text>
+      </g>
+      <g transform="translate(184 180)">
+        <g>
+          <use xlink:href="#hash-box" x="0.5" y="0.5"/>
+          <text x="18.5" y="16" text-anchor="middle">Hash3</text>
+          <use xlink:href="#hash-arrow-right" x="18"/>
+        </g>
+        <g transform="translate(0 25)">
+          <use xlink:href="#tx"/>
+          <text x="18.5" y="56" text-anchor="middle">Tx3</text>
+        </g>
+      </g>
+    </g>
+  </defs>
+  <g>
+    <use xlink:href="#block" />
+    <g transform="translate(32 118)">
+      <rect x="0.5" y="0.5" width="54" height="25" stroke-dasharray="4 2" />
+      <use xlink:href="#hash-arrow-left-short" x="27"/>
+      <text x="27" y="16" text-anchor="middle">Hash12</text>
+    </g>
+
+    <g transform="translate(10 180)">
+      <g>
+        <use xlink:href="#hash-box" x="0.5" y="0.5"/>
+        <text x="18.5" y="16" text-anchor="middle">Hash0</text>
+        <use xlink:href="#hash-arrow-left" x="18"/>
+      </g>
+      <g transform="translate(0 25)">
+        <use xlink:href="#tx"/>
+        <text x="18.5" y="56" text-anchor="middle">Tx0</text>
+      </g>
+    </g>
+
+    <g transform="translate(68 180)">
+      <g>
+        <use xlink:href="#hash-box" x="0.5" y="0.5"/>
+        <text x="18.5" y="16" text-anchor="middle">Hash1</text>
+        <use xlink:href="#hash-arrow-right" x="18"/>
+      </g>
+      <g transform="translate(0 25)">
+        <use xlink:href="#tx"/>
+        <text x="18.5" y="56" text-anchor="middle">Tx1</text>
+      </g>
+    </g>
+
+    <g transform="translate(126 180)">
+      <g>
+        <use xlink:href="#hash-box" x="0.5" y="0.5"/>
+        <text x="18.5" y="16" text-anchor="middle">Hash2</text>
+        <use xlink:href="#hash-arrow-left" x="18"/>
+      </g>
+      <g transform="translate(0 25)">
+        <use xlink:href="#tx"/>
+        <text x="18.5" y="56" text-anchor="middle">Tx2</text>
+      </g>
+    </g>
+    <text x="116" y="296" text-anchor="middle">Transactions Hashed in a Merkle Tree</text>
+  </g>
+
+
+  <g transform="translate(284 0)">
+    <use xlink:href="#block"/>
+    <g transform="translate(126 180)">
+      <rect width="37" height="25" x="0.5" y="0.5"/>
+      <text x="18.5" y="16" text-anchor="middle">Hash2</text>
+      <use xlink:href="#hash-arrow-left" x="18" />
+    </g>
+    <g transform="translate(32 118)">
+      <use xlink:href="#hash-box-double" />
+      <use xlink:href="#hash-arrow-left-short" x="27"/>
+      <text x="27" y="16" text-anchor="middle">Hash12</text>
+    </g>
+    <text x="116" y="296" text-anchor="middle">After Pruning Tx0-2 from the Block</text>
+  </g>
+
+
+
+</svg>

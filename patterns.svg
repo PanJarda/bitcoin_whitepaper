@@ -1,0 +1,40 @@
+<svg viewBox="0 0 430 430" width="430" height="430" xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+  <style>
+    rect
+    {  
+      shape-rendering: crispEdges;
+      stroke-width: 1px;
+      stroke: #000;
+      fill-opacity: 1;
+    }
+
+    path {
+      shape-rendering: crispEdges;
+      stroke-width: 1px;
+      stroke: #000;
+      fill-opacity: 0;
+    }
+  </style>
+  <defs>
+    <pattern id="dotted" width="2" height="2" patternUnits="userSpaceOnUse">
+      <path d="M0 1 h2" stroke-dasharray="1 1"/>
+    </pattern>
+    <pattern id="dashed" width="4" height="4" patternUnits="userSpaceOnUse">
+      <path d="m0 1 h4" stroke-dasharray="3 1"/>
+      <path d="m1 3 h3" stroke-dasharray="3 1"/>
+    </pattern>
+    <pattern id="textual" width="21.5" height="10" patternUnits="userSpaceOnUse">
+      <text x="0" y="5" text-anchor="start" font-size="5">BITCOIN</text>
+      <text x="-11" y="10" text-anchor="start" font-size="5">BITCOIN BITCOIN</text>
+    </pattern>
+    <pattern id="wavepattern" width="8" height="2" patternUnits="userSpaceOnUse">
+      <path id="wave" d="M0 -1 q2 -2, 4 0 t4 0" stroke-linecap="square" shape-rendering="geometricPrecision"/>
+      <path id="wave" d="M0 1 q2 -2, 4 0 t4 0" stroke-linecap="square" shape-rendering="geometricPrecision"/>
+      <path id="wave" d="M0 3 q2 -2, 4 0 t4 0" stroke-linecap="square" shape-rendering="geometricPrecision"/>
+    </pattern>
+  </defs>
+  <rect x="0.5" y="0.5" width="99" height="99" fill="url(#dotted)"/>
+  <rect x="110.5" y="0.5" width="99" height="99" fill="url(#dashed)"/>
+  <rect x="220.5" y="0.5" width="99" height="99" fill="url(#textual)"/>
+  <rect x="330.5" y="0.5" width="99" height="99" fill="url(#wavepattern)"/>
+</svg>

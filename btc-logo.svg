@@ -92,7 +92,7 @@
   <circle class="path" r="396" />
   <circle class="path" r="374" />
   <circle class="path" r="370" />
-  <circle class="path" r="294" />
+  <circle class="path" r="290" />
   <use xlink:href="#36-leafs" mask="url(#b-mask)"/>
   <use class="b" xlink:href="#b"/>
   <text font-size="50" stroke-width="1px" stroke="#000" fill-opacity="0" letter-spacing="2.2">

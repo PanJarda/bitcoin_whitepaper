@@ -1,0 +1,173 @@
+<svg viewBox="-401 -401 802 802" xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+  <style>
+    .path,
+    .b {
+      stroke-width: 1px;
+      stroke: #000;
+      fill-opacity: 0;
+    }
+  </style>
+  <defs>
+    <path id="b" d="M-165 -172
+          h94
+          v-74
+          h44
+          v74
+          h32
+          v-74
+          h44
+          v74
+          Q158 -165, 158 -88
+          Q158 -44, 120 -22
+          Q184 0, 184 60
+          Q184 155, 48 165
+          v74
+          h-44
+          v-74
+          h-32
+          v74
+          h-44
+          v-74
+          H-165
+          L-158 112
+          H-120
+          q10 0, 10 -10
+          V-114
+          q0 -10, -10 -10
+          h-45
+          Z
+          M-32 -122
+          h20
+          q85 0, 85 45
+          q0 45, -85 45
+          h-20
+          Z
+          m0 135
+          h40
+          q86 0, 86 49
+          q0 49, -86 49
+          h-40
+          Z
+          " fill-rule="evenodd"/>
+    <mask id="b-mask">
+      <g>
+        <circle r="400" fill="#fff" fill-opacity="1"/>
+        <use xlink:href="#b" fill-opacity="1" fill="#000" />
+      </g>
+    </mask>
+    <path id="leaf" class="path"
+      d="M0 0
+        q-50 280, 0 280
+        q50 0, 0 -280
+        q-50 -280, 0 -280
+        q50 0, 0 280
+        z
+      "/>
+    <g id="2-leafs">
+      <use xlink:href="#leaf" />
+      <use xlink:href="#leaf" transform="rotate(5)"/>
+    </g>
+    <g id="4-leafs">
+      <use xlink:href="#2-leafs" />
+      <use xlink:href="#2-leafs" transform="rotate(10)"/>
+    </g>
+    <g id="8-leafs">
+      <use xlink:href="#4-leafs" />
+      <use xlink:href="#4-leafs" transform="rotate(20)"/>
+    </g>
+    <g id="16-leafs">
+      <use xlink:href="#8-leafs" />
+      <use xlink:href="#8-leafs" transform="rotate(40)"/>
+    </g>
+    <g id="36-leafs">
+      <use xlink:href="#16-leafs" />
+      <use xlink:href="#16-leafs" transform="rotate(80)"/>
+      <use xlink:href="#4-leafs" transform="rotate(-20)"/>
+    </g>
+    <path id="clipping-path"
+      d="M0 315
+      a315 315 0 1 1 1 0" />
+  </defs>
+  <circle class="path" r="400" />
+  <circle class="path" r="396" />
+  <circle class="path" r="374" />
+  <circle class="path" r="370" />
+  <circle class="path" r="292" />
+  <g mask="url(#b-mask)">
+    <circle class="path" r="4" />
+    <circle class="path" r="8" />
+    <circle class="path" r="12" />
+    <circle class="path" r="16" />
+    <circle class="path" r="20" />
+    <circle class="path" r="24" />
+    <circle class="path" r="28" />
+    <circle class="path" r="32" />
+    <circle class="path" r="36" />
+    <circle class="path" r="40" />
+    <circle class="path" r="44" />
+    <circle class="path" r="48" />
+    <circle class="path" r="52" />
+    <circle class="path" r="56" />
+    <circle class="path" r="60" />
+    <circle class="path" r="64" />
+    <circle class="path" r="68" />
+    <circle class="path" r="72" />
+    <circle class="path" r="76" />
+    <circle class="path" r="80" />
+    <circle class="path" r="84" />
+    <circle class="path" r="88" />
+    <circle class="path" r="92" />
+    <circle class="path" r="96" />
+    <circle class="path" r="100" />
+    <circle class="path" r="104" />
+    <circle class="path" r="108" />
+    <circle class="path" r="112" />
+    <circle class="path" r="116" />
+    <circle class="path" r="120" />
+    <circle class="path" r="124" />
+    <circle class="path" r="128" />
+    <circle class="path" r="132" />
+    <circle class="path" r="136" />
+    <circle class="path" r="140" />
+    <circle class="path" r="144" />
+    <circle class="path" r="148" />
+    <circle class="path" r="152" />
+    <circle class="path" r="156" />
+    <circle class="path" r="160" />
+    <circle class="path" r="164" />
+    <circle class="path" r="168" />
+    <circle class="path" r="172" />
+    <circle class="path" r="176" />
+    <circle class="path" r="180" />
+    <circle class="path" r="184" />
+    <circle class="path" r="188" />
+    <circle class="path" r="192" />
+    <circle class="path" r="196" />
+    <circle class="path" r="200" />
+    <circle class="path" r="204" />
+    <circle class="path" r="208" />
+    <circle class="path" r="212" />
+    <circle class="path" r="216" />
+    <circle class="path" r="220" />
+    <circle class="path" r="224" />
+    <circle class="path" r="228" />
+    <circle class="path" r="232" />
+    <circle class="path" r="236" />
+    <circle class="path" r="240" />
+    <circle class="path" r="244" />
+    <circle class="path" r="248" />
+    <circle class="path" r="252" />
+    <circle class="path" r="256" />
+    <circle class="path" r="260" />
+    <circle class="path" r="264" />
+    <circle class="path" r="268" />
+    <circle class="path" r="272" />
+    <circle class="path" r="276" />
+    <circle class="path" r="280" />
+    <circle class="path" r="284" />
+  </g>
+  <use class="b" xlink:href="#b"/>
+  <text font-size="50" stroke-width="1px" stroke="#000" fill-opacity="0" letter-spacing="2.2">
+    <textPath xlink:href="#clipping-path">BITCOIN • PEER-TO-PEER ELECTRONIC CASH SYSTEM • IN MATH WE TRUST •</textPath>
+  </text>
+</svg>

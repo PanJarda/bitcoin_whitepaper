@@ -1,0 +1,52 @@
+<svg viewBox="0 0 208 135" xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+<style>
+  rect,
+  polyline,
+  line,
+  path {
+    stroke-width: 1px;
+    stroke: #000;
+    fill-opacity: 0;
+  }
+
+  polygon {
+    fill="#000"
+    stroke-width: 0;
+  }
+
+  text {
+    font-size: 11px;
+    font-family: georgia, serif;
+  }
+</style>
+<defs>
+  <polygon id="arrow-head" points="-12,-3.5, -12,3.5 0,0"/>
+  <text id="dotdotdot" x="18" y="16" text-anchor="middle">...</text>
+</defs>
+<g transform="translate(40.5 0.5)">
+  <rect width="126" height="134" />
+  <text x="8" y="16">Transaction</text>
+  <g transform="translate(20 26)">
+    <g id="box-left">
+      <rect width="37" height="25"/>
+      <use xlink:href="#arrow-head" y="13"/>
+      <path d="M-2 13 h-60"/>
+    </g>
+    <text id="in" x="18" y="16" text-anchor="middle">In</text>
+    <use xlink:href="#box-left" y="36"/>
+    <use xlink:href="#in" y="36"/>
+    <use xlink:href="#box-left" y="72"/>
+    <use xlink:href="#dotdotdot" y="72"/>
+    <g transform="translate(58 0)">
+      <g id="box-right">
+        <rect width="37" height="25"/>
+        <use xlink:href="#arrow-head" x="97" y="13"/>
+        <path d="M37 13 h48" />
+      </g>
+      <text x="18" y="16" text-anchor="middle">Out</text>
+      <use xlink:href="#box-right" y="36"/>
+      <use xlink:href="#dotdotdot" y="36"/>
+    </g>
+  </g>
+</g>
+</svg>

@@ -1,0 +1,99 @@
+<svg viewBox="0 0 520 304" xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+<style>
+  rect,
+  polyline,
+  line,
+  path {
+    stroke-width: 1px;
+    stroke: #000;
+    fill-opacity: 0;
+  }
+
+  polygon {
+    fill="#000"
+    stroke-width: 0;
+  }
+
+  text {
+    font-size: 11px;
+    font-family: georgia, serif;
+  }
+</style>
+<defs>
+  <rect id="hash-box" width="37" height="25" stroke-dasharray="4 2"/>
+  <rect id="hash-box-double" width="54" height="25" />
+  <polygon id="arrow-head" points="-3,12 3,12 0,0"/>
+  <polygon id="arrow-head-horizontal" points="-12,-3.5, -12,3.5 0,0"/>
+  <g id="hash-arrow-right">
+    <use xlink:href="#arrow-head" x="-20" y="-36" transform="rotate(-26.57 -20 -36)"/>
+    <line x1="0" y1="0" x2="-19" y2="-34" />
+  </g>
+  <g id="arrow-block-to-block">
+    <use xlink:href="#arrow-head-horizontal" x="29"/>
+    <path d="m0 0 H29"/>
+  </g>
+  <g id="header-block">
+    <rect width="147" height="97" />
+    <text x="8" y="16" text-anchor="start">Block Header</text>
+    <g transform="translate(10 26)">
+      <rect width="67" height="25" />
+      <text x="34" y="16" text-anchor="middle">Prev Hash</text>
+    </g>
+    <g transform="translate(88 26)">
+      <rect width="49" height="25" />
+      <text x="25" y="16" text-anchor="middle">Nonce</text>
+    </g>
+    <g transform="translate(10 62)">
+      <rect width="127" height="25" />
+      <text x="64" y="16" text-anchor="middle">Merkle Root</text>
+    </g>
+  </g>
+</defs>
+<text x="8" y="16">Longest Proof-of-Work Chain</text>
+<g transform="translate(0.5 26.5)">
+  <use xlink:href="#arrow-block-to-block" x="0" y="39"/>
+  <use xlink:href="#header-block" x="19"/>
+  <use xlink:href="#arrow-block-to-block" x="167" y="39"/>
+  <use xlink:href="#header-block" x="186"/>
+  <use xlink:href="#arrow-block-to-block" x="334" y="39"/>
+  <use xlink:href="#header-block" x="353"/>
+  <use xlink:href="#arrow-head-horizontal" x="520" y="39"/>
+  <path d="m501 39 h19"/>
+
+  <g transform="translate(175 124)">
+    <rect width="54" height="25"/>
+    <g transform="translate(27 0)">
+      <use xlink:href="#hash-arrow-right" transform="scale(-1,1)"/>
+    </g>
+    <text x="27" y="16" text-anchor="middle">Hash12</text>
+  </g>
+
+  <g transform="translate(287 124)">
+    <rect width="54" height="25" stroke-dasharray="4 2"/>
+    <use xlink:href="#hash-arrow-right" x="27"/>
+    <text x="27" y="16" text-anchor="middle">Hash23</text>
+    <g transform="translate(40 62)">
+      <g transform="translate(-62 0)">
+        <rect width="37" height="25"/>
+        <text x="18.5" y="16" text-anchor="middle">Hash2</text>
+        <g transform="translate(18 0)">
+          <use xlink:href="#hash-arrow-right" transform="scale(-1,1)"/>
+        </g>
+      </g>
+
+      <use xlink:href="#hash-box"/>
+      <text x="18.5" y="16" text-anchor="middle">Hash3</text>
+      <use xlink:href="#hash-arrow-right" x="18"/>
+
+      <text x="18.5" y="-15">Merkle Branch for Tx3</text>
+
+      <g transform="translate(0 25)">
+        <use xlink:href="#arrow-head-horizontal" x="18" transform="rotate(-90 18 0)"/>
+        <path d="M18 2 v38"/>
+        <rect id="tx-box" width="37" height="25" y="40"/>
+        <text x="18" y="56" text-anchor="middle">Tx3</text>
+      </g>
+    </g>
+  </g>
+</g>
+</svg>

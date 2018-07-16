@@ -1,0 +1,68 @@
+<svg viewBox="0 0 520 187" xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+<style>
+  rect,
+  polyline,
+  line,
+  path {
+    stroke-width: 1px;
+    stroke: #000;
+    fill-opacity: 0;
+  }
+
+  polygon {
+    fill="#000"
+    stroke-width: 0;
+  }
+
+  text {
+    font-size: 11px;
+    font-family: georgia, serif;
+  }
+</style>
+<defs>
+  <polygon id="arrow-head" points="-12,-3.5, -12,3.5 0,0"/>
+  <g id="public">
+    <use xlink:href="#rect-big"/>
+    <text x="40" y="24" text-anchor="middle">Public</text>
+  </g>
+</defs>
+<g transform="translate(0.5 0.5)">
+  <text y="16">Traditional Privacy Model</text>
+  <g transform="translate(19 26)">
+    <g id="identities" transform="translate(0 18)">
+      <rect id="rect-flat" width="80" height="26"/>
+      <text x="40" y="16" text-anchor="middle">Identities</text>
+    </g>
+    <path d="M80 31 h20"/>
+    <g id="transactions" transform="translate(100 18)">
+      <use xlink:href="#rect-flat"/>
+      <text x="8" y="16">Transactions</text>
+      <path d="M80 13 h18"/>
+      <use xlink:href="#arrow-head" x="100" y="13"/>
+    </g>
+    <g transform="translate(200 10)">
+      <rect id="rect-big" width="80" height="42"/>
+      <text x="40" y="16" text-anchor="middle">Trusted</text>
+      <text x="40" y="28" text-anchor="middle">Third Party</text>
+      <path d="M80 21 h18"/>
+      <use xlink:href="#arrow-head" x="100" y="21"/>
+    </g>
+    <g transform="translate(300 10)">
+      <use xlink:href="#rect-big"/>
+      <text x="40" y="24" text-anchor="middle">Counterparty</text>
+    </g>
+    <path d="M400 0 v60"/>
+    <use xlink:href="#public" x="420" y="10"/>
+  </g>
+
+  <g transform="translate(0 100)">
+    <text y="16">New Privacy Model</text>
+    <g transform="translate(19 26)">
+      <use xlink:href="#identities"/>
+      <use xlink:href="#transactions" x="20"/>
+      <path d="M100 0 v60"/>
+      <use xlink:href="#public" x="220" y="10"/>
+    </g>
+  </g>
+</g>
+</svg>
