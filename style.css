@@ -80,17 +80,22 @@ pre {
   padding: 2rem;
 }
 
-.equation{
-  overflow: auto;
+.equation {
+  display: none;
+  background-repeat: no-repeat;
+  margin:0 auto;
 }
 
-.equation img{
+figure {
   overflow: auto;
-  width: auto;
 }
 
 figure img {
   width: 100%;
+}
+
+.equation, .equation-wrap {
+  display: block;
 }
 
 @media screen and (min-width: 50em) {
@@ -104,3 +109,19 @@ figure img {
     padding: 10rem 2rem;
   }
 }
+
+.mathml {
+  display: none;
+}
+
+@supports (-moz-appearance:none) {
+  .mathml {
+    display: block;
+  }
+  
+  .equation, .equation-wrap {
+    display: none;
+    background: none !important;
+  }
+}
+

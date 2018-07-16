@@ -104,9 +104,55 @@ chain, using the hash of the accepted block as the previous hash.</li>
 <i>p</i> = probability an honest node finds the next block<br>
 <i>q</i> = probability the attacker finds the next block<br>
 <i>q<sub>z</sub></i> = probability the attacker will ever catch up from z blocks behind<br>
-<figure class="equation">
-  <img src="satoshi_eqn.svg">
+
+<figure class="equation-wrap">
+  <div class="equation" style="width: 135.836pt; height:40.377pt;background-image: url('satoshi_eqn.svg')"></div>
 </figure>
+
+<div class="mathml">
+  <math display="block">
+    <msub>
+      <mi>q</mi>
+      <mi>z</mi>
+    </msub>
+    <mo>=</mo>
+    <mfenced open="{" close="">
+      <mtable columnspacing="1.4ex" columnalign="left">
+        <mtr>
+          <mtd>
+            <mn>1</mn>
+          </mtd>
+          <mtd>
+            <mtext>if&nbsp;</mtext>
+            <mi>p</mi>
+            <mo>&#x2264;</mo>
+            <mi>q</mi>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <msup>
+              <mrow>
+                <mo>(</mo>
+                <mi>q</mi>
+                <mo>/</mo>
+                <mi>p</mi>
+                <mo>)</mo>
+              </mrow>
+              <mi>z</mi>
+            </msup>
+          </mtd>
+          <mtd>
+            <mtext>if&nbsp;</mtext>
+            <mi>p</mi>
+            <mo>&gt;</mo>
+            <mi>q</mi>
+          </mtd>
+        </mtr>
+      </mtable>
+    </mfenced>
+  </math>
+</div>
 
 <p>Given our assumption that <i>p > q</i>, the probability drops exponentially as the number of blocks the attacker has to catch up with increases. With the odds against him, if he doesn't make a lucky lunge forward early on, his chances become vanishingly small as he falls further behind.
 
@@ -116,15 +162,169 @@ chain, using the hash of the accepted block as the previous hash.</li>
 
 <p>The recipient waits until the transaction has been added to a block and z blocks have been linked after it. He doesn't know the exact amount of progress the attacker has made, but assuming the honest blocks took the average expected time per block, the attacker's potential progress will be a Poisson distribution with expected value:
 
-<figure class="equation">
-  <img src="satoshi_eqn2.svg">
+<figure class="equation-wrap">
+  <div class="equation" style="width: 40.1559pt; height:26.8177pt;background-image: url('satoshi_eqn2.svg')"></div>
 </figure>
 
-<p>To get the probability the attacker could still catch up now, we multiply the Poisson density for each amount of progress he could have made by the probability he could catch up from that point:
+<div class="mathml">
+  <math display="block">
+    <mi>&lambda;</mi>
+    <mo>=</mo>
+    <mi>z</mi>
+    <mfrac>
+      <mi>q</mi>
+      <mi>p</mi>
+    </mfrac>
+  </math>
+</div>
 
-<figure class="equation">
-  <img src="satoshi_eqn3.svg">
+<p>To get the probability the attacker could still catch up now, we multiply the Poisson density for each amount of progress he could have made by the probability he could catch up from that point:</p>
+
+<figure class="equation-wrap">
+  <div class="equation" style="width: 195.47pt; height:40.377pt;background-image: url('satoshi_eqn3.svg')"></div>
 </figure>
+
+<div class="mathml">
+  <math display="block">
+    <mrow>
+      <munderover>
+        <mo>&sum;</mo>
+        <mrow>
+          <mi>k</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+        </mrow>
+        <mi>&infin;</mi>
+      </munderover>
+      <mfrac>
+        <mrow>
+          <msup>
+            <mi>&lambda;</mi>
+            <mi>k</mi>
+          </msup>
+          <msup>
+            <mi>e</mi>
+            <mrow>
+              <mo>-</mo>
+              <mi>&lambda;</mi>
+            </mrow>
+          </msup>
+        </mrow>
+        <mrow>
+          <mi>k</mi>
+          <mo>!</mo>
+        </mrow>
+      </mfrac>
+      <mo>&middot;</mo>
+      <mo>{</mo>
+      <mtable>
+        <mtr>
+          <mtd>
+            <msup>
+              <mrow>
+                <mo>(</mo>
+                <mi>q</mi>
+                <mo>/</mo>
+                <mi>p</mi>
+                <mo>)</mo>
+              </mrow>
+              <mrow>
+                <mo>(</mo>
+                <mi>z</mi>
+                <mo>-</mo>
+                <mi>k</mi>
+                <mo>)</mo>
+              </mrow>
+            </msup>
+          </mtd>
+          <mtd>
+            <mrow>
+              <mtext>if&nbsp;</mtext>
+              <mi>k</mi>
+              <mo>&#x2264;</mo>
+              <mi>z</mi>
+            </mrow>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mn>1</mn>
+          </mtd>
+          <mtd>
+            <mrow>
+              <mtext>if&nbsp;</mtext>
+              <mi>k</mi>
+              <mo>></mo>
+              <mi>z</mi>
+            </mrow>
+          </mtd>
+      </mtable>
+    </mrow>
+  </math>
+</div>
+
+<p>Rearranging to avoid summing the infinite tail of the distribution...</p>
+
+<figure class="equation-wrap">
+  <div class="equation" style="width: 169.452pt; height:36.686pt;background-image: url('satoshi_eqn4.svg')"></div>
+</figure>
+
+<div class="mathml">
+  <math display="block">
+    <mrow>
+      <mn>1</mn>
+      <mo>-</mo>
+      <munderover>
+        <mo>&sum;</mo>
+        <mrow>
+          <mi>k</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+        </mrow>
+        <mi>z</mi>
+      </munderover>
+      <mfrac>
+        <mrow>
+          <msup>
+            <mi>&lambda;</mi>
+            <mi>k</mi>
+          </msup>
+          <msup>
+            <mi>e</mi>
+            <mrow>
+              <mo>-</mo>
+              <mi>&lambda;</mi>
+            </mrow>
+          </msup>
+        </mrow>
+        <mrow>
+          <mi>k</mi>
+          <mo>!</mo>
+        </mrow>
+      </mfrac>
+      <mo>(</mo>
+      <mn>1</mn>
+      <mo>-</mo>
+      <msup>
+        <mrow>
+          <mo>(</mo>
+          <mi>q</mi>
+          <mo>/</mo>
+          <mi>p</mi>
+          <mo>)</mo>
+        </mrow>
+        <mrow>
+          <mo>(</mo>
+          <mi>z</mi>
+          <mo>-</mo>
+          <mi>k</mi>
+          <mo>)</mo>
+        </mrow>
+      </msup>
+      <mo>)</mo>
+    </mrow>
+  </math>
+</div>
 
 <p>Converting to C code...
 
