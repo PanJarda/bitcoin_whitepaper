@@ -90,7 +90,7 @@
     <g transform="translate(32 118)">
       <rect x="0.5" y="0.5" width="54" height="25" stroke-dasharray="4 2" />
       <use xlink:href="#hash-arrow-left-short" x="27"/>
-      <text x="27" y="16" text-anchor="middle">Hash12</text>
+      <text x="27" y="16" text-anchor="middle">Hash01</text>
     </g>
 
     <g transform="translate(10 180)">
